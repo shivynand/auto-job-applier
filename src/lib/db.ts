@@ -112,9 +112,35 @@ export async function upsertJobs(incoming: Job[]): Promise<Job[]> {
 }
 
 export async function resetJobs(): Promise<Job[]> {
-  const jobs = buildSeedJobs();
-  await saveJobs(jobs);
-  return jobs;
+  // Prefer live LinkedIn import over fake seeds when available.
+  const livePath = path.join(DATA_DIR, "imports", "linkedin-live.json");
+  try {
+    const raw = await fs.readFile(livePath, "utf-8");
+    const arr = JSON.parse(raw) as Array<Record<string, unknown>>;
+    const { providerInputToJob } = await import("./providers");
+    const jobs = arr.map((o) => {
+      const url = String(o.url ?? "");
+      const idMatch = url.match(/\/(\d+)\/?/);
+      const job = providerInputToJob({
+        company: String(o.company ?? "Unknown"),
+        role: String(o.role ?? "Untitled"),
+        url,
+        location: String(o.location ?? "Hong Kong"),
+        description: String(o.description ?? ""),
+        source: "LinkedIn",
+        tags: ["linkedin-live", "imported"],
+        languageFlag: o.chineseRequired ? "chinese_required" : undefined,
+      });
+      if (idMatch) job.id = `li-${idMatch[1]}`;
+      return job;
+    }).sort((a, b) => b.matchScore - a.matchScore);
+    await saveJobs(jobs);
+    return jobs;
+  } catch {
+    const jobs = buildSeedJobs();
+    await saveJobs(jobs);
+    return jobs;
+  }
 }
 
 export async function getProfile(): Promise<Profile> {
