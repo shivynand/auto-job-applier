@@ -28,16 +28,41 @@ npm run dev
 |-------|---------|
 | `/` | Tinder-style swipe deck (→ save, ← skip; buttons + keyboard) |
 | `/saved` | Saved jobs + **Generate application pack** |
-| `/job/[id]` | Review/edit tailored CV, cover letter, notes, status |
+| `/job/[id]` | Review/edit tailored CV, cover letter, notes, contact, interview, status |
 | `/settings` | Edit profile (`cv.txt`, `AGENTS.md`) + paste/JSON import |
-| `/tracker` | Pipeline table + CSV export + reset seeds |
+| `/tracker` | Pipeline table + CSV export (GRADUATE grind columns) + sync helper |
 
 ## Persistence
 
 - Jobs: `data/jobs.json` (seeded with 10 realistic HK LinkedIn/HKUST-flavored listings on first run)
 - Profile: `data/profile/cv.txt`, `data/profile/AGENTS.md`, `data/profile/meta.json`
+- Sync file: `data/exports/graduate-grind.csv` (written by `POST /api/export/drive-csv` with `{ "write": true }`)
 
-CSV export columns: Company, Role, Source, URL, Status, Date found, Date materials, Notes, Match reason.
+### Google Sheet "GRADUATE grind" columns
+
+CSV export (`GET /api/export` and tracker download) matches these headers **exactly**:
+
+| Status | Company | Role | Application date | Contact | Interview time and place |
+
+**Status mapping** (internal → sheet):
+
+| Internal | Sheet export |
+|----------|--------------|
+| `applied` | **Applied** |
+| `rejected` | **Rejected** |
+| `saved` | Saved |
+| `materials_ready` | Materials ready |
+| `new` | New |
+| `skipped` | Skipped |
+
+Primary sheet values Shivansh uses are **Applied** and **Rejected**; other pipeline statuses export as readable labels.
+
+### Sync helper
+
+- `GET /api/export` — download `graduate-grind.csv`
+- `POST /api/export/drive-csv` — returns CSV text in JSON; pass `{ "write": true }` to also write `data/exports/graduate-grind.csv`
+
+**Live Google Sheet cell append needs the Google Sheets API + OAuth** (not available via Drive MCP). Use the CSV import / File → Import into the sheet, or paste rows manually until Sheets API is wired.
 
 ## Providers (stubs)
 

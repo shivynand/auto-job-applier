@@ -16,6 +16,8 @@ export default function JobDetailPage({
   const [cv, setCv] = useState("");
   const [letter, setLetter] = useState("");
   const [notes, setNotes] = useState("");
+  const [contact, setContact] = useState("");
+  const [interviewTimePlace, setInterviewTimePlace] = useState("");
   const [status, setStatus] = useState<Job["status"]>("saved");
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState<string | null>(null);
@@ -29,6 +31,8 @@ export default function JobDetailPage({
     setCv(j.tailoredCv || "");
     setLetter(j.coverLetter || "");
     setNotes(j.notes || "");
+    setContact(j.contact || "");
+    setInterviewTimePlace(j.interviewTimePlace || "");
     setStatus(j.status);
   };
 
@@ -66,6 +70,8 @@ export default function JobDetailPage({
           tailoredCv: cv,
           coverLetter: letter,
           notes,
+          contact,
+          interviewTimePlace,
           status,
           dateMaterials:
             cv || letter ? new Date().toISOString() : job?.dateMaterials ?? null,
@@ -147,9 +153,33 @@ export default function JobDetailPage({
           <option value="saved">saved</option>
           <option value="materials_ready">materials_ready</option>
           <option value="applied">applied</option>
+          <option value="rejected">rejected</option>
           <option value="skipped">skipped</option>
           <option value="new">new</option>
         </select>
+      </div>
+
+      <div className="grid gap-4 sm:grid-cols-2">
+        <label className="block space-y-2">
+          <span className="text-sm font-medium text-slate-300">Contact</span>
+          <input
+            value={contact}
+            onChange={(e) => setContact(e.target.value)}
+            className="w-full rounded-xl border border-white/10 bg-slate-950/80 px-3 py-2 text-sm text-slate-200 outline-none focus:border-cyan-500/50"
+            placeholder="Recruiter / contact for GRADUATE grind sheet"
+          />
+        </label>
+        <label className="block space-y-2">
+          <span className="text-sm font-medium text-slate-300">
+            Interview time and place
+          </span>
+          <input
+            value={interviewTimePlace}
+            onChange={(e) => setInterviewTimePlace(e.target.value)}
+            className="w-full rounded-xl border border-white/10 bg-slate-950/80 px-3 py-2 text-sm text-slate-200 outline-none focus:border-cyan-500/50"
+            placeholder="e.g. Tue 3pm Zoom / Central office"
+          />
+        </label>
       </div>
 
       <div className="rounded-2xl border border-white/10 bg-slate-900/60 p-4">

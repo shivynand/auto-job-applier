@@ -42,3 +42,6 @@ next-env.d.ts
 
 # runtime job state (keep profile seeds)
 data/jobs.json
+
+# generated sync CSV (keep folder via .gitkeep)
+data/exports/*.csv

@@ -1,6 +1,13 @@
 import { promises as fs } from "fs";
 import path from "path";
-import type { Job, JobsStore, Profile } from "./types";
+import type {
+  GraduateGrindRow,
+  GraduateGrindStatus,
+  Job,
+  JobStatus,
+  JobsStore,
+  Profile,
+} from "./types";
 import { buildSeedJobs } from "./seed-jobs";
 
 const DATA_DIR = path.join(process.cwd(), "data");
@@ -8,9 +15,25 @@ const JOBS_PATH = path.join(DATA_DIR, "jobs.json");
 const PROFILE_CV = path.join(DATA_DIR, "profile", "cv.txt");
 const PROFILE_AGENTS = path.join(DATA_DIR, "profile", "AGENTS.md");
 const PROFILE_META = path.join(DATA_DIR, "profile", "meta.json");
+const EXPORTS_DIR = path.join(DATA_DIR, "exports");
+export const GRADUATE_GRIND_CSV_PATH = path.join(
+  EXPORTS_DIR,
+  "graduate-grind.csv"
+);
+
+/** Exact header order for Google Sheet "GRADUATE grind". */
+export const GRADUATE_GRIND_HEADERS = [
+  "Status",
+  "Company",
+  "Role",
+  "Application date",
+  "Contact",
+  "Interview time and place",
+] as const;
 
 async function ensureDataFiles() {
   await fs.mkdir(path.join(DATA_DIR, "profile"), { recursive: true });
+  await fs.mkdir(EXPORTS_DIR, { recursive: true });
   try {
     await fs.access(JOBS_PATH);
   } catch {
@@ -63,7 +86,13 @@ export async function updateJob(
   const jobs = await getJobs();
   const idx = jobs.findIndex((j) => j.id === id);
   if (idx === -1) return null;
-  jobs[idx] = { ...jobs[idx], ...patch };
+  const prev = jobs[idx];
+  const next: Job = { ...prev, ...patch };
+  // Stamp application date when transitioning to applied
+  if (patch.status === "applied" && prev.status !== "applied" && !next.dateApplied) {
+    next.dateApplied = new Date().toISOString();
+  }
+  jobs[idx] = next;
   await saveJobs(jobs);
   return jobs[idx];
 }
@@ -126,33 +155,64 @@ export async function saveProfile(profile: Profile): Promise<void> {
   ]);
 }
 
+/** Map internal JobStatus → GRADUATE grind sheet Status cell. */
+export function statusToSheet(status: JobStatus): GraduateGrindStatus {
+  switch (status) {
+    case "applied":
+      return "Applied";
+    case "rejected":
+      return "Rejected";
+    case "saved":
+      return "Saved";
+    case "materials_ready":
+      return "Materials ready";
+    case "new":
+      return "New";
+    case "skipped":
+      return "Skipped";
+    default:
+      return "New";
+  }
+}
+
+function formatApplicationDate(job: Job): string {
+  const raw =
+    job.dateApplied ||
+    (job.status === "applied" || job.status === "rejected"
+      ? job.dateMaterials || job.dateFound
+      : "");
+  if (!raw) return "";
+  const d = new Date(raw);
+  if (Number.isNaN(d.getTime())) return raw;
+  // en-HK style date for the sheet
+  return d.toLocaleDateString("en-HK");
+}
+
+export function jobToGraduateGrindRow(job: Job): GraduateGrindRow {
+  return {
+    Status: statusToSheet(job.status),
+    Company: job.company,
+    Role: job.role,
+    "Application date": formatApplicationDate(job),
+    Contact: job.contact ?? "",
+    "Interview time and place": job.interviewTimePlace ?? "",
+  };
+}
+
 export function jobsToCsv(jobs: Job[]): string {
-  const headers = [
-    "Company",
-    "Role",
-    "Source",
-    "URL",
-    "Status",
-    "Date found",
-    "Date materials",
-    "Notes",
-    "Match reason",
-  ];
   const escape = (v: string) => `"${(v ?? "").replace(/"/g, '""')}"`;
-  const rows = jobs.map((j) =>
-    [
-      j.company,
-      j.role,
-      j.source,
-      j.url,
-      j.status,
-      j.dateFound,
-      j.dateMaterials ?? "",
-      j.notes,
-      j.matchReason,
-    ]
-      .map(escape)
-      .join(",")
-  );
-  return [headers.join(","), ...rows].join("\n");
+  const rows = jobs.map((j) => {
+    const row = jobToGraduateGrindRow(j);
+    return GRADUATE_GRIND_HEADERS.map((h) => escape(row[h])).join(",");
+  });
+  return [GRADUATE_GRIND_HEADERS.join(","), ...rows].join("\n");
+}
+
+/** Write CSV to data/exports/graduate-grind.csv and return the text. */
+export async function writeGraduateGrindCsv(jobs?: Job[]): Promise<string> {
+  await ensureDataFiles();
+  const list = jobs ?? (await getJobs());
+  const csv = jobsToCsv(list);
+  await fs.writeFile(GRADUATE_GRIND_CSV_PATH, csv, "utf-8");
+  return csv;
 }

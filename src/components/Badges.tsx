@@ -32,6 +32,7 @@ export function StatusBadge({ status }: { status: Job["status"] }) {
     saved: "bg-pink-500/20 text-pink-300",
     materials_ready: "bg-violet-500/20 text-violet-300",
     applied: "bg-emerald-500/20 text-emerald-300",
+    rejected: "bg-rose-500/20 text-rose-300",
     skipped: "bg-zinc-600/30 text-zinc-400",
   };
   return (
