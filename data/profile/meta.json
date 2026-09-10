@@ -1,0 +1,17 @@
+{
+  "name": "Shivansh Anand",
+  "email": "sanandaa@connect.ust.hk",
+  "preferences": {
+    "locations": [
+      "Hong Kong"
+    ],
+    "roles": [
+      "AI/ML Intern",
+      "New Grad SWE",
+      "Research Assistant"
+    ],
+    "downrankChineseRequired": true,
+    "prioritizeNewGrad": true,
+    "prioritizeAIML": true
+  }
+}

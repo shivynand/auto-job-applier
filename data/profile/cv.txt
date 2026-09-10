@@ -1,0 +1,69 @@
+                                    Shivansh Anand
+                               sanandaa@connect.ust.hk | Linkedin | Github | Website
+
+Technical Skills
+ Languages: Python, C++, JavaScript
+ Frameworks: React, Node.js, Flask, NextJS, TailwindCSS, Firebase, Mediapipe, YOLO
+ Developer Tools: Git, Google Cloud Platform, MongoDB Compass, Vercel, Jira
+
+Education
+ Hong Kong University of Science and Technology                                                    Hong Kong, HK
+ BEng in Computer Engineering + AI                                                             Sep 2023 - May 2027
+ Societies: International Consulting Club, Student Ambassador, Track and Field
+ Norwegian University of Science and Technology                                                  Trondheim, Norway
+ Exchange Semester                                                                              Jan 2026 - Jun 2026
+ Activities: Control Systems Engineer, Barista, International Committee at Erasmus Student Network
+
+Experience
+ Gen AI Engineer Intern                                                                       Jun 2026 - Aug 2026
+ FWD                                                                                              Hong Kong, HK
+    • Accelerated developer ticket resolution by 6x using a multi-agent coding workflow (Python, Hermes Agent,
+      Jira), reducing token consumption by 45%.
+    • Standardized cross-team AI model safety and guardrail compliance using an agentic evaluation framework with
+
+      risk-based dataset curation, saving $150K USD.
+ Full Stack Engineer Intern                                                                   Jun 2025 - Aug 2025
+ StarryCraze Technology                                                                             Hong Kong, HK
+    • Deployed a serverless data pipeline for an AI news dashboard using GCP, Flask and React, automating
+
+      database updating with 50 articles daily, reducing manual curation time by 90%
+    • Built ‘Celeb-Geoguessr’ a full-stack web game, boosting API response time by 67% for fetching 1000+ entries of
+
+      data using optimized MongoDB queries for faster loading
+    • Summarized descriptions for 95% of cultural attractions in ‘Celeb-Geoguessr’, using BART and MistralAI LLMs
+
+
+ CMO                                                                                          Dec 2024 - Jan 2025
+ Eleuto                                                                                             Hong Kong, HK
+    • Produced 30 reels for 30 days in a row, generating 150+ followers and 40k+ views on Instagram
+
+    • Pitched in HKSTP Techathon competition and ended up winning grand prize of $100k
+
+    • Grew team from 3 to 10 people using social media, including UI/UX designer with 10+ years of experience
+
+ Software Engineering Intern                                                                  Jun 2024 - Aug 2024
+ Century Lab Innovation                                                                               Hong Kong, HK
+    • Created 2 responsive UI pages (feature page & about page) pushed to production using TailwindCSS
+
+    • Developed API for generating topic hints for users learning Chinese with Typescript and React
+
+    • Designed database using relational database Drizzle, eventually got implemented to store data of 2000+ users
+
+
+Projects
+ Snow Pole Detection | Github                                                               Mar 2026 – Apr 2026
+   • Trained a custom snow pole detection model to detect snow poles in Trøndelag Region with 93% accuracy on edge
+
+     devices
+   • Carried out in-depth data analysis with Matplotlib and OpenCV, providing 20% boost to model performance
+
+     without additional compute
+ Basketball dribble detector | Instagram                                                   Jul 2025 – Aug 2025
+   • Created a dribble detection algorithm to detect dribbles from custom trained vision model running at 30 fps
+
+
+  Football AI Coach | Video                                                                    Apr 2025 - Jun 2025
+    • Analysed shooting form, extracting key metrics with 90% accuracy, and giving basic suggestions for improvement
+
+    • Curated dataset and trained a custom YOLOv8 model to identify goal post for accurate shot analysis
+
