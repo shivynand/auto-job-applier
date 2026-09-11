@@ -1,0 +1,202 @@
+[
+  {
+    "company": "TradeLink Technologies Limited",
+    "role": "Data Solutions Engineer",
+    "url": "https://career.hkust.edu.hk/web/job_detail.php?jp=87313",
+    "location": "Hong Kong",
+    "description": "Employment: Internship (above minimum wage), part-time. Supply-chain technology role covering customer data-format analysis, data-processing workflows, databases, conversion testing and technical documentation. Suits Year 3-4 Computer Science, Computer Engineering or Data Science students; English considered.",
+    "chineseRequired": false,
+    "source": "HKUST",
+    "deadline": "2026-10-17"
+  },
+  {
+    "company": "Candy Service Limited",
+    "role": "Business Analyst (Technical Project Coordinator)",
+    "url": "https://career.hkust.edu.hk/web/job_detail.php?jp=86962",
+    "location": "Hong Kong",
+    "description": "Employment: Graduate Job, full-time. Bridges clients and technical teams through meeting documentation, requirements/user stories, action tracking and process diagrams. Fresh graduates in Business, Information Systems or Computer Science welcome; English speaking and writing.",
+    "chineseRequired": false,
+    "source": "HKUST",
+    "deadline": "2026-09-30"
+  },
+  {
+    "company": "TradeLink Technologies Limited",
+    "role": "Data Solutions Consultant",
+    "url": "https://career.hkust.edu.hk/web/job_detail.php?jp=87312",
+    "location": "Hong Kong",
+    "description": "Employment: Internship (above minimum wage), part-time. Builds MFT/reporting applications, ETL user interfaces, frontend/backend monitoring, workflow automation and UAT/testing; Year 3-4 information-systems or Data Science students preferred; English considered.",
+    "chineseRequired": false,
+    "source": "HKUST",
+    "deadline": "2026-10-17"
+  },
+  {
+    "company": "Deep Bridge Limited (深橋有限公司)",
+    "role": "Machine Learning Researcher",
+    "url": "https://career.hkust.edu.hk/web/job_detail.php?jp=87298",
+    "location": "Hong Kong",
+    "description": "Employment: Graduate Job, full-time, on-site. Applied-AI trade-risk research involving Python, pandas/scikit-learn, XGBoost/LightGBM, PyTorch, PostgreSQL, probabilistic models, counterfactual evaluation and reproducible pipelines. Final-year STEM students; English speaking and writing.",
+    "chineseRequired": false,
+    "source": "HKUST",
+    "deadline": "2026-09-30"
+  },
+  {
+    "company": "Squarepoint",
+    "role": "Trading Infrastructure Specialist – Graduate Programme",
+    "url": "https://career.hkust.edu.hk/web/job_detail.php?jp=87174",
+    "location": "Hong Kong",
+    "description": "Employment: Graduate Job, full-time, 18-month rotation. Trading-infrastructure support with Linux, Kubernetes, HPC, distributed storage, monitoring and automation using Python, Bash or Ansible. Engineering/Computer Science graduate role; English considered.",
+    "chineseRequired": false,
+    "source": "HKUST",
+    "deadline": "2026-12-07"
+  },
+  {
+    "company": "Squarepoint",
+    "role": "Graduate Trading Applications Specialist",
+    "url": "https://career.hkust.edu.hk/web/job_detail.php?jp=87176",
+    "location": "Hong Kong",
+    "description": "Employment: Graduate Job, full-time/permanent. Supports critical trading applications, production reliability, service onboarding and automation; requires Python or Bash, Linux and database knowledge. Computer Science, Mathematics or engineering graduates; English considered.",
+    "chineseRequired": false,
+    "source": "HKUST",
+    "deadline": "2026-12-07"
+  },
+  {
+    "company": "Alpacian Limited (訊安顧問有限公司)",
+    "role": "Cyber Security Intern",
+    "url": "https://career.hkust.edu.hk/web/job_detail.php?jp=87249",
+    "location": "Hong Kong",
+    "description": "Employment: Internship (above minimum wage), part-time. Assists vulnerability scanning, penetration testing, security assessments, GRC policies and client deliverables. CS, EE and AI students welcome; Linux/network knowledge helpful; English considered.",
+    "chineseRequired": false,
+    "source": "HKUST",
+    "deadline": "2026-10-31"
+  },
+  {
+    "company": "MIRABO BIOTECHNOLOGY LIMITED",
+    "role": "AI Data Scientist",
+    "url": "https://career.hkust.edu.hk/web/job_detail.php?jp=87166",
+    "location": "Hong Kong",
+    "description": "Employment: Graduate Job, full-time, three years. Develops ML/deep-learning algorithms and AI pipelines for biologics/protein design using Python. Requires biology/bioinformatics-related background, Master's-level profile and relevant experience; English considered.",
+    "chineseRequired": false,
+    "source": "HKUST",
+    "deadline": "2026-12-07"
+  },
+  {
+    "company": "John Swire & Sons (H.K.) Ltd (Swire Group)",
+    "role": "Swire Management Programme 2027",
+    "url": "https://career.hkust.edu.hk/web/job_detail.php?jp=87034",
+    "location": "Hong Kong",
+    "description": "Employment: Graduate Job, full-time. Rotational management programme across industries/functions with leadership development, technical and functional training. Broad-discipline graduate programme; excellent English required and English-only language requirements shown.",
+    "chineseRequired": false,
+    "source": "HKUST",
+    "deadline": "2026-10-31"
+  },
+  {
+    "company": "Geek Plus International Company Limited",
+    "role": "Solution Trainee, Japan",
+    "url": "https://career.hkust.edu.hk/web/job_detail.php?jp=87081",
+    "location": "Chinese Mainland",
+    "description": "Employment: Graduate Job, full-time/permanent. Robotics/logistics automation solution design, AI-assisted needs analysis, technical proposals, layouts and process flows; MySQL/Linux helpful. Industrial/Mechanical/Automation preferred; English listed, with Japanese/Putonghua also requested.",
+    "chineseRequired": false,
+    "source": "HKUST",
+    "deadline": "2026-09-19"
+  },
+  {
+    "company": "Meituan HK Limited (Keeta)",
+    "role": "Keeta Campus Recruitment 2027",
+    "url": "https://career.hkust.edu.hk/web/job_detail.php?jp=87038",
+    "location": "Hong Kong",
+    "description": "Employment: Graduate Job, full-time. Campus hiring includes AI Product Manager, Business Analyst, product/operations and visual-experience tracks across Hong Kong and other cities. Graduates worldwide eligible; English considered.",
+    "chineseRequired": false,
+    "source": "HKUST",
+    "deadline": "2026-10-31"
+  },
+  {
+    "company": "Legend Arb Financial Group Limited (智睿金融有限公司)",
+    "role": "Quantitative Developer Intern",
+    "url": "https://career.hkust.edu.hk/web/job_detail.php?jp=87075",
+    "location": "Hong Kong",
+    "description": "Employment: Internship (above minimum wage), part-time. Develops quantitative trading strategies, real-time data pipelines, dashboards and execution workflows with Python/C#; AI/ML and high-performance data skills are a plus. CS or related technical students; English considered.",
+    "chineseRequired": false,
+    "source": "HKUST",
+    "deadline": "2026-09-30"
+  },
+  {
+    "company": "Meituan HK Limited (Keeta)",
+    "role": "Strategic Analytics Analyst",
+    "url": "https://career.hkust.edu.hk/web/job_detail.php?jp=87041",
+    "location": "Hong Kong",
+    "description": "Employment: Graduate Job, full-time. Uses SQL, AI assistants, BI automation and data analysis to monitor business health, support strategy and conduct market/competitor analysis. English and Cantonese requested; open field of study.",
+    "chineseRequired": false,
+    "source": "HKUST",
+    "deadline": "2026-10-31"
+  },
+  {
+    "company": "CPHAS Limited",
+    "role": "Data Scientist",
+    "url": "https://career.hkust.edu.hk/web/job_detail.php?jp=87073",
+    "location": "Hong Kong",
+    "description": "Employment: Graduate Job, full-time. Builds predictive healthcare AI using UWB radar, machine learning, big data and statistical modelling; Python/cloud required and Spark/R/Hadoop/SQL advantageous. Computer Science/statistics or related; English only language requirements shown.",
+    "chineseRequired": false,
+    "source": "HKUST",
+    "deadline": "2026-09-16"
+  },
+  {
+    "company": "Formlabs (Shenzhen) Technologies Co., Ltd.",
+    "role": "Embedded Hardware Engineer",
+    "url": "https://career.hkust.edu.hk/web/job_detail.php?jp=87017",
+    "location": "Chinese Mainland",
+    "description": "Employment: Graduate Job, full-time, three years. Fabricates/tests electronics, resolves hardware issues, designs circuit modules and debugs systems for 3D printers. Electronics/related graduates with PCB-layout ability; English technical documentation; mainland role.",
+    "chineseRequired": false,
+    "source": "HKUST",
+    "deadline": "2026-11-30"
+  },
+  {
+    "company": "Formlabs (Shenzhen) Technologies Co., Ltd.",
+    "role": "Embedded Software Engineer",
+    "url": "https://career.hkust.edu.hk/web/job_detail.php?jp=87018",
+    "location": "Chinese Mainland",
+    "description": "Employment: Graduate Job, full-time, three years. Develops embedded 3D-printer software including drivers, RTOS, peripherals, architecture, implementation and unit testing; C/C++, data structures and algorithms required. English technical documentation; mainland role.",
+    "chineseRequired": false,
+    "source": "HKUST",
+    "deadline": "2026-11-30"
+  },
+  {
+    "company": "The Trade Desk Limited",
+    "role": "2027 Summer Internship - Software Engineering",
+    "url": "https://career.hkust.edu.hk/web/job_detail.php?jp=87010",
+    "location": "Hong Kong",
+    "description": "Employment: Internship (above minimum wage), full-time, 12 weeks. Owns a complete software project with mentorship, distributed systems, large-scale data processing and machine learning/AI exposure; modern programming languages and algorithms required. English only. Eligibility states Dec 2027–Aug 2028 graduation, so verify fit for final-year status.",
+    "chineseRequired": false,
+    "source": "HKUST",
+    "deadline": "2026-11-13"
+  },
+  {
+    "company": "Hong Kong Productivity Council",
+    "role": "Summer InnoTalent Programme",
+    "url": "https://career.hkust.edu.hk/web/job_detail.php?jp=87060",
+    "location": "Hong Kong",
+    "description": "Employment: Internship (above minimum wage), full-time, nine-week summer programme. Hands-on AI, smart manufacturing, digital transformation, sustainability and emerging-technology R&D; English only. Open to Year 1+ undergraduate/postgraduate students and suitable for AI/engineering interests.",
+    "chineseRequired": false,
+    "source": "HKUST",
+    "deadline": "2026-12-02"
+  },
+  {
+    "company": "Shining 3D Tech Co., Ltd.",
+    "role": "The 2027 Autumn Campus Recruitment of Shining 3D (Advance Access) is Now Open!",
+    "url": "https://career.hkust.edu.hk/web/job_detail.php?jp=87053",
+    "location": "Chinese Mainland (Hangzhou; other locations may open later)",
+    "description": "Employment: Graduate Job, full-time. 3D-vision recruitment spans SLAM/mesh/geometric/3D-reconstruction/deep-learning/AI-generative algorithms, C++/embedded software, hardware and R&D management tracks. Graduating 2026/2027; English listed alongside Chinese; Hangzhou initially.",
+    "chineseRequired": false,
+    "source": "HKUST",
+    "deadline": "2026-11-25"
+  },
+  {
+    "company": "ECOCERES LIMITED",
+    "role": "Graduate Trainee",
+    "url": "https://career.hkust.edu.hk/web/job_detail.php?jp=86922",
+    "location": "Hong Kong",
+    "description": "Employment: Graduate Job, full-time. Rotational sustainable-technology programme across biofuels innovation, process engineering, technology, research/innovation and project analysis; bachelor's degree any discipline. English and Chinese professional proficiency requested.",
+    "chineseRequired": false,
+    "source": "HKUST",
+    "deadline": "2026-11-26"
+  }
+]
